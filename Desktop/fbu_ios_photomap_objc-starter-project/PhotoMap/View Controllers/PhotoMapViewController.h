@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LocationsViewController.h"
+#import <MapKit/MapKit.h>
 
-@interface PhotoMapViewController : UIViewController
+@class PhotoMapViewController;
+
+@interface PhotoMapViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, LocationsViewControllerDelegate>
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation;
 
 @end
